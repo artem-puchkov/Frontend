@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>доступ к DOM</title>
+</head>
+<body>
+  <div style="padding-top: 100px; padding-left: 100px;" class="container">
+    <div style="display: flex; gap: 8px;">
+      <input id="firstInput" style="width: 95px; height: 33px; padding: 0 10px;" type="number">
+      <select name="" id="select">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+      </select>
+      <input id="secondInput" style="width: 95px; height: 33px; padding: 0 10px;" type="number">
+      <button id="equal" style="width: 39px; height: 33px; cursor: pointer; background-color: #fff; border: 1px solid #000; border-radius: 5px;">=</button>
+      <div id="result" style="display: flex; align-items: center; justify-content: flex-start; min-width: 40px; height: 33px; padding: 0 10px; border: 1px solid #000;"></div>
+      <script src="calc.js"></script>
+    </div>
+  </div>
+</body>
+</html>
