@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>доступ к DOM</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="cardbox">
+    <div class="cardbox-high">
+      <p class="cardbox__title">HIGH PRIORITY</p>
+      <div class="cardbox-high-wrapper">
+        <div class="cardbox-input">
+          <form id="addHighTask">
+            <input type="text" name="userInput" placeholder="Добавить важных дел" class="cardbox-input__input">
+            <button class="cardbox-input__btn">
+                <img src="images/plus.svg" class="cardbox-input__image">
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="cardbox-low">
+      <p class="cardbox__title">LOW PRIORITY</p>
+      <div class="cardbox-low-wrapper">
+        <div class="cardbox-input">
+          <form id="addLowTask">
+            <input type="text" name="userInput" placeholder="Добавить неважных дел" class="cardbox-input__input">
+            <button class="cardbox-input__btn">
+                <img src="images/plus.svg" class="cardbox-input__image">
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="todo.js"></script>
+</body>
+</html>
