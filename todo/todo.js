@@ -11,14 +11,14 @@ const deleteTaskButton = document.querySelector('.cardbox-card__btn');
 
 
 const taskArray = [
-    {text: 'Выучить JavaScript', prioriy: PRIORITY_HIGH},
-    {text: 'Сделать лабораторные по электротехнике и начертить графики', prioriy: PRIORITY_HIGH},
-    {text: 'Сходить в магазин', prioriy: PRIORITY_LOW},
+    {text: 'Выучить JavaScript', prioriy: PRIORITY_HIGH, isOnScreen: false},
+    {text: 'Сделать лабораторные по электротехнике и начертить графики', prioriy: PRIORITY_HIGH, isOnScreen: false},
+    {text: 'Сходить в магазин', prioriy: PRIORITY_LOW, isOnScreen: false},
 ];
 
 function addTask(taskText, taskPriority) {
     taskArray.push(
-        {text: taskText, prioriy: taskPriority}
+        {text: taskText, prioriy: taskPriority, isOnScreen: false}
     );
 }
 
@@ -61,9 +61,27 @@ function createCard(userInput) {
     return card;
 }
 
-// function renderTasks() {
-
-// }
+function renderTasks() {
+    for(task of taskArray){
+        if (task.isOnScreen) {
+            continue;
+        } 
+        else {
+            if (task.prioriy === PRIORITY_HIGH) {
+                const card = createCard(task.text);
+        
+                highWrapper.appendChild(card);
+            } 
+            else if (task.prioriy === PRIORITY_LOW) {
+                const card = createCard(task.text);
+        
+                lowWrapper.appendChild(card);
+            }
+            
+            task.isOnScreen = true;
+        }
+    }
+}
 
 addHighTaskForm.addEventListener('submit', function(event) {
     event.preventDefault();
@@ -74,9 +92,7 @@ addHighTaskForm.addEventListener('submit', function(event) {
     const card = createCard(userInput);
 
     addTask(userInput, PRIORITY_HIGH);
-    highWrapper.appendChild(card);
-
-    console.log(taskArray);
+    renderTasks();
 });
 
 addLowTaskForm.addEventListener('submit', function(event) {
@@ -88,20 +104,9 @@ addLowTaskForm.addEventListener('submit', function(event) {
     const card = createCard(userInput);
 
     addTask(userInput, PRIORITY_LOW);
-    lowWrapper.appendChild(card);
+    renderTasks();
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-    for(task of taskArray){
-        if (task.prioriy === PRIORITY_HIGH) {
-            const card = createCard(task.text);
-    
-            highWrapper.appendChild(card);
-        } 
-        else if (task.prioriy === PRIORITY_LOW) {
-            const card = createCard(task.text);
-    
-            lowWrapper.appendChild(card);
-        } 
-    }
+    renderTasks();
 });
