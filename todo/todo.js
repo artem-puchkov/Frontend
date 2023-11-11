@@ -27,19 +27,6 @@ function deleteTask(taskText) {
     taskArray.splice(index, 1);
 }
 
-for(task of taskArray){
-    if (task.prioriy === PRIORITY_HIGH) {
-        const card = createCard(task.text);
-
-        highWrapper.appendChild(card);
-    } 
-    else if (task.prioriy === PRIORITY_LOW) {
-        const card = createCard(task.text);
-
-        lowWrapper.appendChild(card);
-    } 
-}
-
 
 function createCard(userInput) {
     const card = document.createElement('div');
@@ -74,6 +61,10 @@ function createCard(userInput) {
     return card;
 }
 
+// function renderTasks() {
+
+// }
+
 addHighTaskForm.addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -100,3 +91,17 @@ addLowTaskForm.addEventListener('submit', function(event) {
     lowWrapper.appendChild(card);
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+    for(task of taskArray){
+        if (task.prioriy === PRIORITY_HIGH) {
+            const card = createCard(task.text);
+    
+            highWrapper.appendChild(card);
+        } 
+        else if (task.prioriy === PRIORITY_LOW) {
+            const card = createCard(task.text);
+    
+            lowWrapper.appendChild(card);
+        } 
+    }
+});
