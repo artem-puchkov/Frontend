@@ -1,0 +1,130 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *::after, *::before{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #d8bfd8;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+
+input:focus {
+    outline: none;
+}
+
+.cardbox {
+    background-color: white;
+    width: 476px;
+    min-height: 688px;
+    margin-left: 37%;
+    margin-top: 5%;
+}
+
+.cardbox__title {
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 12px;
+}
+
+.cardbox-high-wrapper,
+.cardbox-low-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.cardbox-input {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.cardbox-input__btn {
+    cursor: pointer;
+    background-color: #fff;
+    border: none;
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    padding-left: 10px;
+}
+
+.cardbox-input__input {
+    width: 460px;
+    min-height: 45px;
+    border: 1px solid #989898;
+    border-radius: 6px;
+    padding-left: 12px;
+    padding-right: 40px;
+    font-size: 18px;
+}
+
+.cardbox-input__input::placeholder {
+    color: #BBB;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+
+.cardbox-card {
+    display: flex;
+    margin: 0 auto;
+    width: 460px;
+    min-height: 45px;
+    border: 1px solid #989898;
+    border-radius: 6px;
+    position: relative;
+}
+
+.cardbox-card__text {
+    max-width: 400px;
+    padding-left: 30px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.cardbox-card__btn {
+    cursor: pointer;
+    background-color: #fff;
+    border: none;
+    position: absolute;
+    right: 12px;
+    top: 15px;
+}
+
+.cardbox-card__checkbox {
+    display: inline-block;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 1px solid #998899; 
+    border-radius: 50%;
+    width: 22px;
+    height: 22px; 
+    position: relative;
+}
+
+input[type="checkbox"]:checked::before {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #C4C4C4;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
