@@ -1,0 +1,134 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *::after, *::before{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #d8bfd8;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+    background-color: #fff;
+    border: none;
+}
+
+.container {
+    width: 621px;
+    height: 383px;
+    background-color: #fff;
+    margin-left: 600px;
+    margin-top: 280px;
+}
+
+.wrapper {
+    display: inline-block;
+    width: 600px;
+    height: 359px;
+    border: 1px solid black;
+    margin-top: 12px;
+    margin-left: 11px;
+}
+
+.wheather-form {
+    position: relative;
+}
+
+.weather-form__input {
+    width: 599px;
+    height: 45px;
+    border: 1px solid black;
+    border-top: none;
+    border-left: none;
+    padding-left: 16px;
+    padding-right: 60px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+
+.weather-form__input::placeholder {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+
+.weather-form__btn {
+    position: absolute;
+    top: 10px;
+    right: 21px;
+}
+
+.weather-content {
+    display: flex;
+}
+
+.weather-info {
+    width: 50%;
+    height: 314px;
+    border-right: 1px solid black;
+    position: relative;
+}
+
+.weather-favorite {
+    width: 50%;
+}
+
+.weather-info__degree {
+    font-size: 70px;
+    font-weight: 400;
+    padding-top: 20px;
+    padding-left: 23px;
+}
+
+.weather-info__image {
+    padding-top: 40px;
+    padding-left: 112px;
+}
+
+.weather-info__city {
+    font-size: 24px;
+    padding-top: 55px;
+    padding-left: 16px;
+}
+
+.weather-info__btn {
+    position: absolute;
+    bottom: 20px;
+    right: 16px;
+}
+
+.weather-favorite-caption {
+    height: 68px;
+    border-bottom: 1px solid black;
+}
+
+.weather-favorite-caption__text {
+    font-size: 24px;
+    padding-top: 23px;
+    padding-left: 18px;
+}
+
+.weather-favorite__list {
+    padding-top: 35px;
+    padding-left: 18px;
+}
+
+.weather-favorite__item {
+    display: block;
+    font-size: 24px;
+    line-height: 1.8;
+}
