@@ -28,18 +28,24 @@ button {
     border: none;
 }
 
+hr {
+    border: none;
+    height: 1px;
+    background-color: black;
+}
+
 .container {
     width: 621px;
-    height: 383px;
+    height: 683px;
     background-color: #fff;
     margin-left: 600px;
-    margin-top: 280px;
+    margin-top: 155px;
 }
 
 .wrapper {
     display: inline-block;
     width: 600px;
-    height: 359px;
+    min-height: 655px;
     border: 1px solid black;
     margin-top: 12px;
     margin-left: 11px;
@@ -78,37 +84,73 @@ button {
 
 .weather-info {
     width: 50%;
-    height: 314px;
     border-right: 1px solid black;
-    position: relative;
 }
 
 .weather-favorite {
     width: 50%;
 }
 
+.weather-info-inner {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 23px;
+}
+
 .weather-info__degree {
     font-size: 70px;
     font-weight: 400;
-    padding-top: 20px;
-    padding-left: 23px;
+    padding-top: 16px;
+    padding-left: 16px;
+    display: inline-block;
 }
 
 .weather-info__image {
-    padding-top: 40px;
-    padding-left: 112px;
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 10px;
+    margin-left: 10px;
 }
 
 .weather-info__city {
     font-size: 24px;
-    padding-top: 55px;
     padding-left: 16px;
 }
 
 .weather-info__btn {
-    position: absolute;
-    bottom: 20px;
-    right: 16px;
+    padding-right: 16px;
+}
+
+.weather-info-addition {
+    font-size: 21px;
+    padding-left: 16px;
+    padding-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.weather-info-hours {
+    padding: 32px 16px 5px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+}
+
+.weather-info-hour__time {
+    padding-bottom: 15px;
+}
+
+.weather-info-hour-inner {
+    display: inline-block;
+    padding-bottom: 13px;
+}
+
+.weather-info-hour__image {
+    margin-left: 71px;
+    width: 35px;
+    height: 35px;
 }
 
 .weather-favorite-caption {
@@ -128,7 +170,17 @@ button {
 }
 
 .weather-favorite__item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.weather-favorite__city {
     display: block;
     font-size: 24px;
     line-height: 1.8;
+    text-align: left;
+}
+
+.weather-favorite__delete {
+    margin-right: 20px;
 }
