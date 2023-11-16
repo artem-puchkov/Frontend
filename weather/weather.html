@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Weather</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="weather">
+    <div class="container">
+      <div class="wrapper">
+        <div class="wheather-form">
+          <form id="searchCity">
+            <input type="text" name="userInput" placeholder="Chose city" class="weather-form__input">
+            <button class="weather-form__btn">
+                <img src="images/search.svg">
+            </button>
+          </form>
+        </div>
+        <div class="weather-content">
+          <div class="weather-info">
+            <div class="weather-info-inner">
+              <p class="weather-info__city"></p>
+              <button class="weather-info__btn">
+                <img src="images/heart.svg" alt="">
+              </button>
+            </div>
+            <h3 class="weather-info__degree"></h3>
+            <img src="images/cloud.svg" alt="" class="weather-info__image">
+            <div class="weather-info-addition">
+              <p class="weather-info__feels"></p>
+              <p class="weather-info__sunrise"></p>
+              <p class="weather-info__sunset"></p>
+            </div>
+            <div class="weather-info-hours">
+              <div class="weather-info-hour1">
+                <p class="weather-info-hour__time"></p>
+                <div class="weather-info-hour-inner">
+                  <p class="weather-info-hour__temp"></p>
+                  <p class="weather-info-hour__feels"></p>
+                </div>
+                <img src="images/cloud.svg" alt="" class="weather-info-hour__image">
+                <hr>
+              </div>
+              <div class="weather-info-hour2">
+                <p class="weather-info-hour__time"></p>
+                <div class="weather-info-hour-inner">
+                  <p class="weather-info-hour__temp"></p>
+                  <p class="weather-info-hour__feels"></p>
+                </div>
+                <img src="images/cloud.svg" alt="" class="weather-info-hour__image">
+                <hr>
+              </div>
+              <div class="weather-info-hour3">
+                <p class="weather-info-hour__time"></p>
+                <div class="weather-info-hour-inner">
+                  <p class="weather-info-hour__temp"></p>
+                  <p class="weather-info-hour__feels"></p>
+                </div>
+                <img src="images/cloud.svg" alt="" class="weather-info-hour__image">
+              </div>
+            </div>
+          </div>
+          <div class="weather-favorite">
+            <div class="weather-favorite-caption">
+              <p class="weather-favorite-caption__text">Added Locations:</p>
+            </div>
+              <ul class="weather-favorite__list">
+              </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script type="module" src="./weather.js"></script>
+  <script type="module" src="./storage.js"></script>
+</body>
+</html>
