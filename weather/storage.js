@@ -1,8 +1,8 @@
 import {addFavoriteCityOnPage, replaceMainCityOnPage, SERVER_WEATHER_URL, SERVER_FORECAST_URL, API_KEY} from './weather.js';
 
 const favoriteCitiesSet = new Set();
-if (!localStorage.getItem('favoriteCities')) {
-    const favoriteCitiesArray = Array.from(favoriteCitiesSet);
+if (!localStorage.getItem('favoriteCities')) {  // просходит один раз, при заходе с нового браузера, чтобы
+    const favoriteCitiesArray = Array.from(favoriteCitiesSet); // инициализировать множесто в локал стородже
     localStorage.setItem('favoriteCities', JSON.stringify(favoriteCitiesArray));
 }
 
